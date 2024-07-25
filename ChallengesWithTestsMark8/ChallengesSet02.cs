@@ -105,21 +105,8 @@ namespace ChallengesWithTestsMark8
 
         public bool IsSumOdd(List<int> numbers)
         {
-            int sumReturn = numbers.Sum();
-
-            if (numbers == null)
-            {
-                return false;
-            }
-
-            if (sumReturn % 2 != 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            if (numbers == null) return false;
+            return numbers.Select(x => x).Sum() % 2 != 0;
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
